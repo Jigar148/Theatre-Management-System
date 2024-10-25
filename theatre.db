@@ -1,0 +1,26 @@
+CREATE DATABASE theatre_management;
+
+USE theatre_management;
+
+CREATE TABLE movies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    genre VARCHAR(100),
+    language VARCHAR(100),
+    subtitles VARCHAR(100),
+    screen_no INT,
+    location VARCHAR(100),
+    release_date DATE,
+    ticket_price DECIMAL(10, 2)
+);
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT,
+    seat_numbers VARCHAR(255),
+    customer_name VARCHAR(255),
+    customer_email VARCHAR(255),
+    total_price DECIMAL(10, 2),
+    booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (movie_id) REFERENCES movies(id)
+);

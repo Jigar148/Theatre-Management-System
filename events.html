@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theater Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Theater Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#beverages">Beverages</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div id="movies" class="tab">
+            <h2>Movies</h2>
+            <div id="movies-list"></div>
+            <button id="add-movie">Add Movie</button>
+        </div>
+
+        <div id="beverages" class="tab">
+            <h2>Beverages</h2>
+            <div id="beverages-list"></div>
+            <button id="add-beverage">Add Beverage</button>
+        </div>
+
+        <div id="events" class="tab">
+            <h2>Events</h2>
+            <div id="events-list"></div>
+            <button id="add-event">Add Event</button>
+        </div>
+
+        <div id="checkout" class="tab">
+            <h2>Checkout</h2>
+            <div id="checkout-list"></div>
+            <button id="confirm-checkout">Confirm Checkout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

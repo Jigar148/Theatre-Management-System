@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Movie - Theatre Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Book Movie</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="beverages.html">Beverages</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="logout.html">Logout</a>
+</nav>
+<div class="seat-container">
+    <h2>Select Seats</h2>
+    <div id="seats">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat booked"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat booked"></div>
+        <div class="seat"></div>
+    </div>
+    <button onclick="bookSeats()">Book Selected Seats</button>
+</div>
+<footer>
+    &copy; 2024 Theatre Management System
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

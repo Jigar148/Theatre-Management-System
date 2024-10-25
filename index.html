@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Theater Management System</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Theater Management System</h1>
+            <button id="logout">Logout</button>
+        </header>
+        <nav>
+            <button id="movies-tab">Movies</button>
+            <button id="beverages-tab">Beverages</button>
+            <button id="events-tab">Events</button>
+            <button id="checkout-tab">Checkout</button>
+        </nav>
+
+        <div class="tab-content" id="movies-section">
+            <h2>Movies</h2>
+            <input type="text" id="search-movies" placeholder="Search Movies">
+            <button id="add-movie">Add Movie</button>
+            <div id="add-movie-form" style="display: none;">
+                <input type="text" id="movie-title" placeholder="Movie Title">
+                <input type="text" id="movie-duration" placeholder="Duration (e.g., 120 min)">
+                <input type="text" id="movie-director" placeholder="Director">
+                <input type="text" id="movie-producer" placeholder="Producer">
+                <input type="text" id="movie-language" placeholder="Language">
+                <input type="text" id="movie-genre" placeholder="Genre">
+                <textarea id="movie-storyline" placeholder="Storyline"></textarea>
+                <input type="text" id="movie-poster" placeholder="Poster URL">
+                <input type="text" id="movie-trailer" placeholder="Trailer URL">
+                <button id="submit-movie">Submit Movie</button>
+            </div>
+            <div id="movies-list"></div>
+            <div id="seat-selection" style="display:none;">
+                <h3>Select Seats for <span id="selected-movie-title"></span></h3>
+                <div id="seat-matrix"></div>
+                <button id="confirm-seat-selection">Confirm Seats</button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="beverages-section">
+            <h2>Beverages</h2>
+            <input type="text" id="search-beverages" placeholder="Search Beverages">
+            <button id="add-beverage">Add Beverage</button>
+            <div id="add-beverage-form" style="display: none;">
+                <input type="text" id="beverage-name" placeholder="Beverage Name">
+                <input type="number" id="beverage-price" placeholder="Price">
+                <button id="submit-beverage">Submit Beverage</button>
+            </div>
+            <div id="beverages-list"></div>
+        </div>
+
+        <div class="tab-content" id="events-section">
+            <h2>Events</h2>
+            <input type="text" id="search-events" placeholder="Search Events">
+            <button id="add-event">Add Event</button>
+            <div id="add-event-form" style="display: none;">
+                <input type="text" id="event-title" placeholder="Event Title">
+                <input type="text" id="event-location" placeholder="Location">
+                <textarea id="event-description" placeholder="Description"></textarea>
+                <input type="date" id="event-date">
+                <input type="time" id="event-time">
+                <button id="submit-event">Submit Event</button>
+            </div>
+            <div id="events-list"></div>
+        </div>
+
+        <div class="tab-content" id="checkout-section">
+            <h2>Checkout</h2>
+            <div id="checkout-list"></div>
+            <h3>Select Payment Method</h3>
+            <select id="payment-method">
+                <option value="cash">Cash on Spot</option>
+                <option value="card">Card</option>
+                <option value="upi">UPI</option>
+                <option value="netbanking">Net Banking</option>
+            </select>
+            <button id="confirm-checkout">Confirm Checkout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

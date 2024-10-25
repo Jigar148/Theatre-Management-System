@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverages</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Beverages</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="beverage-list">
+            <h2>Available Beverages</h2>
+            <div id="beverage-container"></div>
+            <button id="add-beverage-btn">Add Beverage</button>
+        </section>
+
+        <!-- Add Beverage Section -->
+        <section id="add-beverage-section" style="display:none;">
+            <h2>Add a New Beverage</h2>
+            <form id="add-beverage-form">
+                <label>Name: <input type="text" id="beverage-name" required></label><br>
+                <label>Price: <input type="number" id="beverage-price" required></label><br>
+                <button type="submit">Submit</button>
+                <button type="button" id="cancel-add-beverage">Cancel</button>
+            </form>
+        </section>
+
+        <!-- Beverage Combos Section -->
+        <section id="combo-section">
+            <h2>Create a Combo</h2>
+            <select id="combo-dropdown">
+                <!-- Dynamically Populated Beverages for Combos -->
+            </select>
+            <button id="add-combo-btn">Add Combo</button>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Movies</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="beverages.html">Beverages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Filter Section -->
+        <section id="filter-section">
+            <h2>Filter Movies</h2>
+            <label>Duration:
+                <input type="text" id="filter-duration">
+            </label>
+            <label>OTT Platform:
+                <input type="text" id="filter-ott">
+            </label>
+            <label>Language:
+                <input type="text" id="filter-language">
+            </label>
+            <button id="apply-filters-btn">Apply Filters</button>
+        </section>
+
+        <!-- Movie List Section -->
+        <section id="movie-list">
+            <h2>Available Movies</h2>
+            <div id="movie-container"></div>
+            <button id="add-movie-btn">Add Movie</button>
+        </section>
+
+        <!-- Add Movie Section -->
+        <section id="add-movie-section" style="display:none;">
+            <h2>Add a New Movie</h2>
+            <form id="add-movie-form">
+                <label>Title: <input type="text" id="movie-title" required></label><br>
+                <label>Duration: <input type="text" id="movie-duration" required></label><br>
+                <label>Star Cast: <input type="text" id="movie-star-cast" required></label><br>
+                <label>Director: <input type="text" id="movie-director" required></label><br>
+                <label>Producer: <input type="text" id="movie-producer" required></label><br>
+                <label>Language: <input type="text" id="movie-language" required></label><br>
+                <label>Genre: <input type="text" id="movie-genre" required></label><br>
+                <label>OTT Platform: <input type="text" id="movie-ott" required></label><br>
+                <label>Poster URL: <input type="text" id="movie-poster" required></label><br>
+                <label>Trailer URL: <input type="text" id="movie-trailer" required></label><br>
+                <label>Storyline: <textarea id="movie-storyline" required></textarea><br>
+                <button type="submit">Submit</button>
+                <button type="button" id="cancel-add-movie">Cancel</button>
+            </form>
+        </section>
+
+        <!-- Book Movie Section -->
+        <section id="book-movie">
+            <h2>Book a Movie</h2>
+            <select id="movie-dropdown">
+                <option value="">Select Movie</option>
+                <!-- Dynamically Populated -->
+            </select>
+            <div id="seat-matrix"></div>
+            <button id="book-btn">Book Selected Seats</button>
+        </section>
+
+        <!-- Remove Movie Section -->
+        <section id="remove-movie">
+            <h2>Remove a Movie</h2>
+            <select id="remove-movie-dropdown">
+                <option value="">Select Movie to Remove</option>
+                <!-- Dynamically Populated -->
+            </select>
+            <button id="remove-movie-btn">Remove Movie</button>
+        </section>
+    </main>
+
+<div id="seat-selection" style="display:none;">
+    <h3>Select Seats for <span id="selected-movie-title"></span></h3>
+    
+    <div id="seat-matrix">
+        <!-- Row A -->
+        <div class="row">
+            <span>A</span>
+            <button class="seat recliner" data-seat="A1">A1</button>
+            <button class="seat recliner" data-seat="A2">A2</button>
+            <button class="seat recliner" data-seat="A3">A3</button>
+            <button class="seat recliner" data-seat="A4">A4</button>
+            <button class="seat recliner" data-seat="A5">A5</button>
+            <button class="seat recliner" data-seat="A6">A6</button>
+            <button class="seat recliner" data-seat="A7">A7</button>
+            <button class="seat recliner" data-seat="A8">A8</button>
+            <button class="seat recliner" data-seat="A9">A9</button>
+            <button class="seat recliner" data-seat="A10">A10</button>
+        </div>
+        
+        <!-- Row B (Platinum) -->
+        <div class="row">
+            <span>B</span>
+            <button class="seat platinum" data-seat="B1">B1</button>
+            <button class="seat platinum" data-seat="B2">B2</button>
+            <button class="seat platinum" data-seat="B3">B3</button>
+            <button class="seat platinum" data-seat="B4">B4</button>
+            <button class="seat platinum" data-seat="B5">B5</button>
+            <button class="seat platinum" data-seat="B6">B6</button>
+            <button class="seat platinum" data-seat="B7">B7</button>
+            <button class="seat platinum" data-seat="B8">B8</button>
+            <button class="seat platinum" data-seat="B9">B9</button>
+            <button class="seat platinum" data-seat="B10">B10</button>
+        </div>
+        
+        <!-- Row C (Gold) -->
+        <div class="row">
+            <span>C</span>
+            <button class="seat gold" data-seat="C1">C1</button>
+            <button class="seat gold" data-seat="C2">C2</button>
+            <button class="seat gold" data-seat="C3">C3</button>
+            <button class="seat gold" data-seat="C4">C4</button>
+            <button class="seat gold" data-seat="C5">C5</button>
+            <button class="seat gold" data-seat="C6">C6</button>
+            <button class="seat gold" data-seat="C7">C7</button>
+            <button class="seat gold" data-seat="C8">C8</button>
+            <button class="seat gold" data-seat="C9">C9</button>
+            <button class="seat gold" data-seat="C10">C10</button>
+        </div>
+        
+        <!-- Row D (Silver) -->
+        <div class="row">
+            <span>D</span>
+            <button class="seat silver" data-seat="D1">D1</button>
+            <button class="seat silver" data-seat="D2">D2</button>
+            <button class="seat silver" data-seat="D3">D3</button>
+            <button class="seat silver" data-seat="D4">D4</button>
+            <button class="seat silver" data-seat="D5">D5</button>
+            <button class="seat silver" data-seat="D6">D6</button>
+            <button class="seat silver" data-seat="D7">D7</button>
+            <button class="seat silver" data-seat="D8">D8</button>
+            <button class="seat silver" data-seat="D9">D9</button>
+            <button class="seat silver" data-seat="D10">D10</button>
+        </div>
+    </div>
+
+    <button id="confirm-seat-selection">Confirm Seats</button>
+</div>
+</body>
+</html>

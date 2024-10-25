@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Movie</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Book a Movie</h1>
+    </header>
+    <main>
+        <section id="movie-selection">
+            <h2>Select a Movie</h2>
+            <select id="movie-dropdown">
+                <option value="">Choose a movie...</option>
+            </select>
+        </section>
+
+        <section id="seat-selection">
+            <h2>Select Your Seats</h2>
+            <div id="seat-matrix"></div>
+        </section>
+
+        <section id="options">
+            <h2>Options</h2>
+            <label for="language">Language:</label>
+            <select id="language"></select>
+
+            <label for="subtitle">Subtitle:</label>
+            <select id="subtitle"></select>
+
+            <label for="genre">Genre:</label>
+            <select id="genre"></select>
+
+            <label for="ott-platform">OTT Platform:</label>
+            <select id="ott-platform"></select>
+        </section>
+
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <div id="selected-seats"></div>
+            <div id="total-price"></div>
+            <button id="confirm-booking">Confirm Booking</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Theater Management System</p>
+    </footer>
+</body>
+</html>
